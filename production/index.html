@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nice Looking Checkout</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+  <body>
+    <header>
+     <progress id = 'progress' max="100" value="0"></progress>
+     <div class= 'title-box'>
+      <span class="company-name">JEREMY'S CHECKOUT</span>
+    </div>
+   </header>
+      <section class="form-section">
+        <h3 class = "form-title">Where should we ship your order?</h3>
+          <div class='div-input-full-line'>
+            <label for='fullname'></label>
+            <div class= 'description-full-line'>Name</div>
+             <input class='input-full-line' type='name' id='shippingname' placeholder='Type your full name' autofocus autocomplete='name'   required>
+          </div>
+          <div class='div-input-full-line'>
+            <label for='shippingaddress'></label>
+            <div class= 'description-full-line'>Address</div>
+            <input class='input-full-line' type='text' id='shippingaddress' placeholder='Type address to ship to' autocomplete='street-address' onFocus ='geolocate()'  required>
+          </div>
+      </section>
+       <section class="form-section">
+         <h3 class = "form-title">How would you like to pay?</h3>
+        <div class='div-input-full-line'>
+          <label for='ccnum'></label>
+          <div class= 'description-full-line'>Card Number</div>
+          <input class='input-full-line' type='text' id='ccnum' placeholder="●●●● ●●●● ●●●● ●●●●"  required maxlength="16" minlength="16" pattern="[\d]{16}" title="16 Digits, Front of your card">
+          </div>
+        <div class= 'ccdetails'>
+          <div class= 'ccmonth ccdet'>
+             <label for='ccMonth'>
+                <div class= 'description-full-line'>Month</div>
+                <div class='div-input-full-line'>
+                  <input class='input-full-line cc' type='text' id='ccMonth' placeholder="MM" cc-exp-month' maxlength="2" pattern="[\d]{1,2}" title="Two digits in length" required>
+                </div>
+              </label>
+          </div>
+          <div class= 'ccyear ccdet'>
+             <label for='ccYear'>
+                <div class= 'description-full-line'>Year</div>
+                <div class='div-input-full-line'>
+                  <input class='input-full-line cc' type='text' id='ccYear' placeholder="YY" pattern="[\d]{1,2}" maxlength="2" title="Two digits in length"  required >
+                </div>
+              </label>
+          </div>
+          <div class= 'cccsv ccdet'>
+             <label for='ccCSV'>
+                <div class= 'description-full-line'>CSV</div>
+                <div class='div-input-full-line'>
+                  <input class='input-full-line cc' type='text' id='ccCSV' placeholder="XXX" maxlength="3" pattern="\d{3}" title="Three digits at back of your card"  required>
+                </div>
+              </label>
+          </div>
+        </div>
+        <div class = 'differentbiller'>
+          <input type="checkbox" id="checkboxbiller"/>
+          <label for = 'checkboxbiller'>Different Biller?</label>
+          <div class = 'billerdetails'>
+            <div class='div-input-full-line2'>
+              <label for='billername'></label>
+              <div class= 'description-full-line2'>Biller Name</div>
+              <input class='input-full-line' type='text' id='billername' placeholder='Type your billers full name' autocomplete='name'  required>
+            </div>
+            <div class='div-input-full-line2'>
+              <label for='billeraddress'></label>
+              <div class= 'description-full-line2'>Biller Address</div>
+                <input class='input-full-line' type='text' id='billeraddress' placeholder='Type address to bill to' autocomplete='street-address'  required>
+              </div>
+          </div>
+        </div>
+        </section>
+        <section class="form-section">
+          <h2 class = 'order-title'>Your Order</h2>
+          <div class="flex-container flex-vertical">
+            <div class="flex-container flex-horizontal">
+              <div class="flex-2 bold"></div>
+              <div class="flex-3 bold">Item</div>
+              <div class="flex-1 bold"></div>
+              <div class="flex-2 bold">Price</div>
+            </div>
+            <div class="flex-container flex-horizontal">
+              <div class="flex-2"><img class="responsive" src="images/NES-Console-Set.png" alt="NES Console By Evan-Amos (Own work) [Public domain], via Wikimedia Commons"></div>
+              <div class="flex-3">Classic Video Game Console</div>
+              <div class="flex-1">1x</div>
+              <div class="flex-2 price">$500.00</div>
+            </div>
+          </div>
+        </section>
+        <section class = "form-section">
+          <div class = 'button-div'>
+          <button type = 'submit' class = 'submit-button' >Submit</button>
+        </div>
+      </section>
+    <script src="js/app.js"></script>
+    <script src="js/geolocate.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRuujm_2Y9GRxfBArRTtJoDpkSufA6wA0&libraries=places&callback=initAutocomplete"
+    async defer></script>
+  </body>
+</html>
+
+
