@@ -16,12 +16,10 @@ Clicking different biller will result in more fields being displayed.
 * Intuitive UX behaviour
 * Use of autocomplete and Google's geolocate feature.
 
-![GIF](https://github.com/Jlevett/Checkout-Payment-Form-Mockup/blob/master/checkout.gif)
-
 ## Instuctions to use
 1. Download the zip file
 2. Extract it into a folder
 3. Run the file index.html
 
-
+![GIF](https://github.com/Jlevett/Checkout-Payment-Form-Mockup/blob/master/checkout.gif)
 
